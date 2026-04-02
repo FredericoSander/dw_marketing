@@ -1,0 +1,5 @@
+Pandas
+sqlalchemy
+python-dotenv
+psycopg2-binary
+kaggle
