@@ -1,0 +1,149 @@
+[0m16:02:00.584976 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CED6AB5D60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CED93812E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CED9963E60>]}
+
+
+============================== 16:02:00.652846 | dbb36033-4fed-465a-85b7-370989f28657 ==============================
+[0m16:02:00.652846 [info ] [MainThread]: Running with dbt=1.11.7
+[0m16:02:00.657850 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\desk\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt init', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m16:02:21.821320 [debug] [MainThread]: Starter project path: W:\dw_marketing\.venv\Lib\site-packages\dbt\include\starter_project
+[0m16:02:22.013937 [info ] [MainThread]: 
+Your new dbt project "localhost" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m16:02:22.017937 [info ] [MainThread]: Setting up your profile.
+[0m16:04:30.751529 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7D1DDFCE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7D4A63A40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7D4A60B00>]}
+
+
+============================== 16:04:30.800734 | cdebcb39-2d62-43cb-af98-7a74d923f149 ==============================
+[0m16:04:30.800734 [info ] [MainThread]: Running with dbt=1.11.7
+[0m16:04:30.802907 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\desk\\.dbt', 'invocation_command': 'dbt init', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m16:10:44.098635 [debug] [MainThread]: Starter project path: W:\dw_marketing\.venv\Lib\site-packages\dbt\include\starter_project
+[0m16:10:44.342552 [info ] [MainThread]: 
+Your new dbt project "dw_marketing" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m16:10:44.345559 [info ] [MainThread]: Setting up your profile.
+[0m16:13:59.139775 [info ] [MainThread]: Profile dw_marketing written to C:\Users\desk\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m16:13:59.163145 [debug] [MainThread]: Command `dbt init` succeeded at 16:13:59.163145 after 568.60 seconds
+[0m16:13:59.166002 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7D45F6DB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7D604E900>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7D629C680>]}
+[0m16:13:59.168993 [debug] [MainThread]: Flushing usage events
+[0m16:14:00.325925 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:43:55.908040 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EC8C876900>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EC8B4FF230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EC8C8768D0>]}
+
+
+============================== 16:43:55.958499 | 8ae8354b-58b4-45c3-af78-c4a023ed9045 ==============================
+[0m16:43:55.958499 [info ] [MainThread]: Running with dbt=1.11.7
+[0m16:43:55.961495 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'W:\\dw_marketing', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m16:43:56.371479 [info ] [MainThread]: dbt version: 1.11.7
+[0m16:43:56.373486 [info ] [MainThread]: python version: 3.12.1
+[0m16:43:56.375490 [info ] [MainThread]: python path: W:\dw_marketing\.venv\Scripts\python.exe
+[0m16:43:56.377489 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m16:43:56.382491 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Syntax error near line 5
+  ------------------------------
+  2  |   outputs:
+  3  |     prod:
+  4  |       dbname: "dw_marketing
+  5  |       host: "{{env_var('DB_HOST_PROD')}}"
+  6  |       pass: "{{env_var('DB_PASS_PROD')}}"
+  7  |       port: "{{env_var('DB_PORT_PROD')}}"
+  8  |       user: "{{env_var('DB_USER_PROD')}}"
+  
+  Raw Error:
+  ------------------------------
+  while parsing a block mapping
+    in "<unicode string>", line 4, column 7
+  did not find expected key
+    in "<unicode string>", line 5, column 14
+[0m16:43:56.390491 [debug] [MainThread]: Command `dbt debug` failed at 16:43:56.390491 after 0.62 seconds
+[0m16:43:56.392494 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EC8AC32270>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EC8C876AE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EC8C8769C0>]}
+[0m16:43:56.393495 [debug] [MainThread]: Flushing usage events
+[0m16:43:57.538417 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:45:30.629078 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C7BA1D6DB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C7BA1D6CF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C7BA1D6C60>]}
+
+
+============================== 16:45:30.680454 | 9c46af8a-e003-4812-9a23-538417dacd8a ==============================
+[0m16:45:30.680454 [info ] [MainThread]: Running with dbt=1.11.7
+[0m16:45:30.682448 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'W:\\dw_marketing', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m16:45:31.065345 [info ] [MainThread]: dbt version: 1.11.7
+[0m16:45:31.069342 [info ] [MainThread]: python version: 3.12.1
+[0m16:45:31.072342 [info ] [MainThread]: python path: W:\dw_marketing\.venv\Scripts\python.exe
+[0m16:45:31.076342 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m16:45:31.082348 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Syntax error near line 5
+  ------------------------------
+  2  |   outputs:
+  3  |     prod:
+  4  |       dbname: "dw_marketing
+  5  |       host: "{{env_var('DB_HOST_PROD')}}"
+  6  |       pass: "{{env_var('DB_PASS_PROD')}}"
+  7  |       port: "{{env_var('DB_PORT_PROD')}}"
+  8  |       user: "{{env_var('DB_USER_PROD')}}"
+  
+  Raw Error:
+  ------------------------------
+  while parsing a block mapping
+    in "<unicode string>", line 4, column 7
+  did not find expected key
+    in "<unicode string>", line 5, column 14
+[0m16:45:31.093742 [debug] [MainThread]: Command `dbt debug` failed at 16:45:31.093742 after 0.59 seconds
+[0m16:45:31.097742 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C7BA275760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C7B8CD7200>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C7BA1E1340>]}
+[0m16:45:31.101742 [debug] [MainThread]: Flushing usage events
+[0m16:45:32.260041 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:52:10.270213 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D7AA57A870>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D7AA57A8A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D7AA57A960>]}
+
+
+============================== 16:52:10.319219 | ede772e0-a07c-4f96-a22d-db3b62b348ee ==============================
+[0m16:52:10.319219 [info ] [MainThread]: Running with dbt=1.11.7
+[0m16:52:10.322206 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'W:\\dw_marketing', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m16:52:10.675149 [info ] [MainThread]: dbt version: 1.11.7
+[0m16:52:10.677655 [info ] [MainThread]: python version: 3.12.1
+[0m16:52:10.678659 [info ] [MainThread]: python path: W:\dw_marketing\.venv\Scripts\python.exe
+[0m16:52:10.682661 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m16:52:10.696679 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Syntax error near line 5
+  ------------------------------
+  2  |   outputs:
+  3  |     prod:
+  4  |       dbname: "dw_marketing
+  5  |       host: "{{env_var('DB_HOST_PROD')}}"
+  6  |       pass: "{{env_var('DB_PASS_PROD')}}"
+  7  |       port: "{{env_var('DB_PORT_PROD')}}"
+  8  |       user: "{{env_var('DB_USER_PROD')}}"
+  
+  Raw Error:
+  ------------------------------
+  while parsing a block mapping
+    in "<unicode string>", line 4, column 7
+  did not find expected key
+    in "<unicode string>", line 5, column 14
+[0m16:52:10.704679 [debug] [MainThread]: Command `dbt debug` failed at 16:52:10.704679 after 0.56 seconds
+[0m16:52:10.708498 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D7AA57A7E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D7AA57AFC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D7AA57AA20>]}
+[0m16:52:10.712498 [debug] [MainThread]: Flushing usage events
+[0m16:52:11.677143 [debug] [MainThread]: An error was encountered while trying to flush usage events
