@@ -1,0 +1,224 @@
+version: 2
+
+models:
+  # Dimensão de Tempo
+  - name: int_dim_date
+    description: "Dimensão de tempo com atributos temporais para análise"
+    config:
+      materialized: table
+      unique_key: date_day
+    columns:
+      - name: date_day
+        description: "Data no formato YYYY-MM-DD"
+        tests:
+          - not_null
+          - unique
+      - name: prior_date_day
+        description: "Data do dia anterior"
+      - name: next_date_day
+        description: "Data do próximo dia"
+      - name: prior_year_date_day
+        description: "Mesma data no ano anterior"
+      - name: prior_year_over_year_date_day
+        description: "Dia anterior à mesma data no ano anterior"
+      - name: day_of_week
+        description: "Número do dia da semana (1-7, onde 1 é domingo)"
+      - name: day_of_week_name
+        description: "Nome completo do dia da semana"
+      - name: day_of_week_name_short
+        description: "Abreviação do nome do dia da semana (3 letras)"
+      - name: day_of_month
+        description: "Dia do mês (1-31)"
+      - name: day_of_year
+        description: "Dia do ano (1-366)"
+      - name: week_start_date
+        description: "Primeiro dia da semana (domingo)"
+      - name: week_end_date
+        description: "Último dia da semana (sábado)"
+      - name: prior_year_week_start_date
+        description: "Primeiro dia da semana no ano anterior"
+      - name: prior_year_week_end_date
+        description: "Último dia da semana no ano anterior"
+      - name: week_of_year
+        description: "Número da semana no ano (1-53)"
+      - name: iso_week_start_date
+        description: "Primeiro dia da semana ISO (segunda-feira)"
+      - name: iso_week_end_date
+        description: "Último dia da semana ISO (domingo)"
+      - name: prior_year_iso_week_start_date
+        description: "Primeiro dia da semana ISO no ano anterior"
+      - name: prior_year_iso_week_end_date
+        description: "Último dia da semana ISO no ano anterior"
+      - name: iso_week_of_year
+        description: "Número da semana ISO no ano (1-53)"
+      - name: prior_year_week_of_year
+        description: "Número da semana no ano anterior"
+      - name: prior_year_iso_week_of_year
+        description: "Número da semana ISO no ano anterior"
+      - name: month_of_year
+        description: "Número do mês (1-12)"
+      - name: month_name
+        description: "Nome completo do mês"
+      - name: month_name_short
+        description: "Abreviação do nome do mês (3 letras)"
+      - name: month_start_date
+        description: "Primeiro dia do mês"
+      - name: month_end_date
+        description: "Último dia do mês"
+      - name: prior_year_month_start_date
+        description: "Primeiro dia do mês no ano anterior"
+      - name: prior_year_month_end_date
+        description: "Último dia do mês no ano anterior"
+      - name: quarter_of_year
+        description: "Número do trimestre (1-4)"
+      - name: quarter_start_date
+        description: "Primeiro dia do trimestre"
+      - name: quarter_end_date
+        description: "Último dia do trimestre"
+      - name: year_number
+        description: "Ano (ex: 2023)"
+      - name: year_start_date
+        description: "Primeiro dia do ano"
+      - name: year_end_date
+        description: "Último dia do ano"
+      - name: dbt_updated_at
+        description: "Data/hora da última atualização no dbt"
+      - name: dbt_loaded_at
+        description: "Data/hora de carregamento no dbt"
+ 
+  # Dimensão de Campanhas
+  - name: int_dim_campaigns
+    description: "Dimensão de campanhas de marketing com atributos detalhados"
+    config:
+      materialized: table
+      unique_key: campaign_id
+    columns:
+      - name: campaign_id
+        description: "ID único da campanha"
+        tests:
+          - not_null
+          - unique
+      - name: channel
+        description: "Canal de marketing utilizado (ex: email, redes sociais, etc.)"
+      - name: objective
+        description: "Objetivo da campanha (ex: conversão, engajamento, etc.)"
+      - name: start_date
+        description: "Data de início da campanha"
+      - name: end_date
+        description: "Data de término da campanha"
+      - name: target_segment
+        description: "Segmentação da campanha (ex: público-alvo, região, etc.)"
+      - name: expected_uplift
+        description: "Aumento esperado para a campanha"
+  
+  # Dimensao de Clientes
+  - name: int_dim_customers
+    description: "Dimensão de clientes com atributos detalhados"
+    config:
+      materialized: table
+      unique_key: customer_id
+    columns:
+      - name: customer_id
+        description: "ID único do cliente"
+        tests:
+          - not_null
+          - unique
+      - name: signup_date
+        description: "Data de cadastro do cliente"
+      - name: country
+        description: "País de residência do cliente"
+      - name: age
+        description: "Idade do cliente"
+      - name: gender
+        description: "Gênero do cliente"
+      - name: loyalty_tier
+        description: "Nível de fidelidade do cliente (ex: bronze, prata, ouro)"
+      - name: acquisition_channel
+        description: "Canal de aquisição do cliente (ex: orgânico, pago, etc.)"
+        
+  # Dimensão de Eventos
+  - name: int_dim_events
+    description: "Dimensão de eventos relacionados aos pedidos, com atributos detalhados"
+    config:
+      materialized: table
+      unique_key: event_id
+    columns:  
+      - name: event_id
+        description: "ID único do evento"
+        tests:
+          - not_null
+          - unique
+      - name: timestamp
+        description: "Data e hora do evento" 
+      - name: customer_id
+        description: "ID do cliente relacionado ao evento"
+      - name: session_id
+        description: "ID da sessão do cliente durante o evento"
+      - name: event_type
+        description: "Tipo de evento (ex: pedido criado, pedido pago, etc.)"
+      - name: product_id
+        description: "ID do produto relacionado ao evento"
+      - name: device_type
+        description: "Tipo de dispositivo utilizado durante o evento (ex: desktop, mobile, etc.)"
+      - name: traffic_source
+        description: "Fonte de tráfego do evento (ex: orgânico, pago, etc.)"
+      - name: campaign_id
+        description: "ID da campanha de marketing associada ao evento (se houver)"
+      - name: page_category
+        description: "Categoria da página visitada durante o evento (ex: homepage, produto, etc.)"
+      - name: session_duration_sec
+        description: "Duração da sessão do cliente durante o evento (em segundos)"
+      - name: experiment_group
+        description: "Grupo de experimento do cliente durante o evento (ex: controle, teste A, teste B, etc.)"
+
+  # Dimensão de Produtos 
+  - name: int_dim_products
+    description: "Dimensão de produtos com atributos detalhados"
+    config:
+      materialized: table
+      unique_key: product_id
+    columns:
+      - name: product_id
+        description: "ID único do produto"
+        tests:
+          - not_null
+          - unique
+      - name: category
+        description: "Categoria do produto"
+      - name: brand
+        description: "Marca do produto"
+      - name: base_price
+        description: "Preço do produto"
+      - name: launch_date
+        description: "Data de lançamento do produto"
+      - name: is_premium
+        description: "Indica se o produto é premium (ex: true, false)"
+      
+  # Fato de Transações 
+  - name: int_fact_transactions
+    description: "Fato de transações com métricas e chaves para análise de pedidos"
+    config:
+      materialized: table
+      unique_key: transaction_id
+    columns:
+      - name: transaction_id
+        description: "ID único do pedido"
+        tests:
+          - not_null
+          - unique
+      - name: timestamp
+        description: "Data e hora do pedido"
+      - name: customer_id
+        description: "ID do cliente que fez o pedido"
+      - name: product_id
+        description: "ID do produto comprado"
+      - name: quantity
+        description: "Quantidade do produto comprado"
+      - name: discount_applied
+        description: "Indica se um desconto foi aplicado ao pedido (ex: true, false)"
+      - name: gross_revenue
+        description: "Receita bruta do pedido (quantidade * preço do produto)"
+      - name: campaign_id
+        description: "ID da campanha de marketing associada ao pedido (se houver)"
+      - name: refund_flag
+        description: "Indica se o pedido foi reembolsado (ex: true, false)"

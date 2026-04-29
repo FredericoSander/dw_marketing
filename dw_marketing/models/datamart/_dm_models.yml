@@ -1,0 +1,93 @@
+version: 2
+
+models:
+  # Métricas de Clientes (marts)
+  - name: dm_campaigns
+    description: "Métricas e segmentação de campanhas"
+    config:
+      materialized: table
+      unique_key: campanha_id
+    columns:
+      - name: campanha_id
+        description: "Chave substituta da campanha" 
+        tests:
+          - not_null
+          - unique
+      - name: canal
+        description: "Canal de marketing da campanha"
+      - name: objetivo
+        description: "Objetivo da campanha"
+      - name: segmento_alvo
+        description: "Segmento alvo da campanha"
+      - name: clientes_unicos 
+        description: "Número de clientes únicos impactados pela campanha"
+      - name: total_transacoes
+        description: "Número total de transações da campanha"
+      - name: quantidade_itens_vendidos
+        description: "Quantidade total de itens vendidos na campanha"
+      - name: receita_total
+        description: "Receita total da campanha"
+      - name: ticket_medio
+        description: "Valor total gasto pela campanha dividido pelo número de transações"
+      - name: receita_por_cliente
+        description: "Receita total da campanha dividida pelo número de clientes únicos"
+      - name: total_adicionar_ao_carrinho
+        description: "Número total de vezes que os clientes adicionaram produtos ao carrinho durante a campanha"  
+      - name: total_pular
+        description: "Número total de vezes que os clientes pularam a campanha" 
+      - name: total_cliques
+        description: "Número total de cliques na campanha"
+      - name: total_compras
+        description: "Número total de compras realizadas durante a campanha"
+      - name: total_visualizacoes
+        description: "Número total de visualizações da campanha"
+      - name: ranking_transacoes
+        description: "Classificação das campanhas com base no número de transações"
+      - name: ranking_quantidade
+        description: "Classificação das campanhas com base na quantidade de itens vendidos"
+      - name: ranking_receita_total
+        description: "Classificação das campanhas com base na receita total"
+      - name: ranking_reembolsos
+        description: "Classificação das campanhas com base no número de reembolsos"
+      - name: data_carga
+        description: "Data da última carga dos dados" 
+
+  - name: dm_customers
+    description: "Métricas e segmentação de clientes"
+    config:
+        materialized: table
+        unique_key: customer_id
+    columns:
+        - name: customer_id
+          description: "Chave substituta do cliente"
+          tests:
+            - not_null
+            - unique
+        - name: total_de_transacoes
+          description: "Países onde a campanha foi realizada"
+        - name: valor_total
+          description: "Valor total das transações realizadas pelo cliente"
+        - name: ticket_medio
+          description: "Valor total gasto pelo cliente dividido pelo número de transações"
+        - name: data_do_primeiro_pedido 
+          description: "Data do primeiro pedido realizado pelo cliente"     
+        - name: data_do_ultimo_pedido
+          description: "Data do último pedido realizado pelo cliente"
+        - name: total_anos_ativos
+          description: "Número total de anos ativos do cliente"
+        - name: pedidos_verao
+          description: "Número de pedidos realizados pelo cliente no verão"
+        - name: pedidos_outono
+          description: "Número de pedidos realizados pelo cliente no outono"
+        - name: pedidos_inverno
+          description: "Número de pedidos realizados pelo cliente no inverno"
+        - name: pedidos_primavera
+          description: "Número de pedidos realizados pelo cliente na primavera"
+        - name: transacao_sem_campanhas
+          description: "Número de transações realizadas pelo cliente sem campanha"
+        - name: transacao_com_campanhas
+          description: "Número de transações realizadas pelo cliente com campanha"
+        - name: receita_sem_campanhas
+          description: "Receita total do cliente sem campanha"
+        - name: receita_com_campanhas
+          description: "Receita total do cliente com campanha"

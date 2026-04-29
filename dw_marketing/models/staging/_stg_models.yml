@@ -1,0 +1,122 @@
+version: 2
+
+sources:
+  - name: dw_marketing
+    schema: public
+    tables:
+      - name: campaigns
+        description: "Tabela de campanhas de marketing. Contém informações sobre as campanhas realizadas, como canal, objetivo, datas e segmentação."
+        columns:
+          - name: campaign_id
+            description: "ID único da campanha"
+            tests:
+              - unique
+              - not_null
+          - name: channel
+            description: "Canal de marketing utilizado (ex: email, redes sociais, etc.)"
+          - name: objective
+            description: "Objetivo da campanha (ex: conversão, engajamento, etc.)"
+          - name: start_date
+            description: "Data de início da campanha"
+          - name: end_date
+            description: "Data de término da campanha"
+          - name: target_segment
+            description: "Segmentação da campanha (ex: público-alvo, região, etc.)"
+          - name: expected_uplift
+            description: "Aumento esperado para a campanha"
+      
+      - name: customers
+        description: "Tabela de clientes. Contém informações sobre os clientes, como CPF, nome, email e data de cadastro."
+        columns:
+          - name: customer_id
+            description: "ID único do cliente"
+            tests:
+              - unique
+              - not_null
+          - name: signup_date
+            description: "Data de cadastro do cliente"
+          - name: country
+            description: "País de residência do cliente"
+          - name: age
+            description: "Idade do cliente"
+          - name: gender
+            description: "Gênero do cliente"
+          - name: loyalty_tier
+            description: "Nível de fidelidade do cliente (ex: bronze, prata, ouro)"
+          - name: acquisition_channel
+            description: "Canal de aquisição do cliente (ex: orgânico, pago, etc.)"
+
+      - name: events
+        description: "Tabela de eventos. Contém informações sobre os eventos relacionados aos pedidos, como tipo de evento, data e hora."
+        columns:  
+          - name: event_id
+            description: "ID único do evento"
+            tests:
+              - unique
+              - not_null
+          - name: timestamp
+            description: "Data e hora do evento" 
+          - name: customer_id
+            description: "ID do cliente relacionado ao evento"
+          - name: session_id
+            description: "ID da sessão do cliente durante o evento"
+          - name: event_type
+            description: "Tipo de evento (ex: pedido criado, pedido pago, etc.)"
+          - name: product_id
+            description: "ID do produto relacionado ao evento"
+          - name: device_type
+            description: "Tipo de dispositivo utilizado durante o evento (ex: desktop, mobile, etc.)"
+          - name: traffic_source
+            description: "Fonte de tráfego do evento (ex: orgânico, pago, etc.)"
+          - name: campaign_id
+            description: "ID da campanha de marketing associada ao evento (se houver)"
+          - name: page_category
+            description: "Categoria da página visitada durante o evento (ex: homepage, produto, etc.)"
+          - name: session_duration-sec
+            description: "Duração da sessão do cliente durante o evento (em segundos)"
+          - name: experiment_group
+            description: "Grupo de experimento do cliente durante o evento (ex: controle, teste A, teste B, etc.)"
+      
+      - name: products
+        description: "Tabela de produtos. Contém informações sobre os produtos disponíveis, como nome, categoria e preço."
+        columns:
+          - name: product_id
+            description: "ID único do produto"
+            tests:
+              - unique
+              - not_null
+          - name: category
+            description: "Categoria do produto"
+          - name: brand
+            description: "Marca do produto"
+          - name: base_price
+            description: "Preço do produto"
+          - name: launch_date
+            description: "Data de lançamento do produto"
+          - name: is_premium
+            description: "Indica se o produto é premium (ex: true, false)"
+
+      - name: transactions
+        description: "Tabela de pedidos. Contém informações detalhadas sobre os pedidos realizados, incluindo valores, endereço de entrega e status."
+        columns:
+          - name: transaction_id
+            description: "ID único do pedido"
+            tests:
+              - unique
+              - not_null
+          - name: timestamp
+            description: "Data e hora do pedido"
+          - name: customer_id
+            description: "ID do cliente que fez o pedido"
+          - name: product_id
+            description: "ID do produto comprado"
+          - name: quantity
+            description: "Quantidade do produto comprado"
+          - name: discount_applied
+            description: "Indica se um desconto foi aplicado ao pedido (ex: true, false)"
+          - name: gross_revenue
+            description: "Receita bruta do pedido (quantidade * preço do produto)"
+          - name: campaign_id
+            description: "ID da campanha de marketing associada ao pedido (se houver)"
+          - name: refund_flag
+            description: "Indica se o pedido foi reembolsado (ex: true, false)"
